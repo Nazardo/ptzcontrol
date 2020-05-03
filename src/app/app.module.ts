@@ -5,10 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { PresetListComponent } from './preset-list/preset-list.component';
+import { SetPresetFormComponent } from './set-preset-form/set-preset-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PresetListComponent,
+    SetPresetFormComponent
   ],
   imports: [
     BrowserModule,
