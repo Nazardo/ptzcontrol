@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IsapiImplementationService } from '../isapi-implementation.service';
 import { Preset } from '../preset';
+import { PresetsService } from '../presets.service';
 
 @Component({
   selector: 'app-set-preset-form',
@@ -10,7 +11,8 @@ import { Preset } from '../preset';
 export class SetPresetFormComponent implements OnInit {
 
   constructor(
-    private isapi: IsapiImplementationService
+    private isapi: IsapiImplementationService,
+    private presets: PresetsService
   ) { }
 
   ngOnInit(): void {
@@ -23,6 +25,9 @@ export class SetPresetFormComponent implements OnInit {
     this.isapi.setPreset({
       label: this.label,
       number: this.number
-    }).subscribe(null, error => console.error(error))
+    }).subscribe(
+      () => this.presets.refreshPresets(),
+      error => console.error(error)
+    )
   }
 }
