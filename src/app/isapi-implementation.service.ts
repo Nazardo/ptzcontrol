@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Preset } from './preset';
+import { PtzValues } from './ptz-values';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,27 @@ export class IsapiImplementationService {
   ) { }
 
   baseUrl: string = '/ISAPI/PTZCtrl/channels/1'
+
+  setContinuousMovement(ptz: PtzValues): Observable<void> {
+    const url = [this.baseUrl, 'continuous'].join('/')
+    const xmlData = [
+      '<PTZData version="2.0" xmlns="http://www.isapi.org/ver20/XMLSchema">',
+      '<pan>', ptz.pan, '</pan><tilt>', ptz.tilt, '</tilt><zoom>',
+      ptz.zoom,'</zoom></PTZData>'
+    ].join('')
+    return this.doXmlPut(url, xmlData)
+  }
+
+  doMovement(ptz: PtzValues, millis: number): Observable<void> {
+    const url = [this.baseUrl, 'momentary'].join('/')
+    const xmlData = [
+      '<PTZData version="2.0" xmlns="http://www.isapi.org/ver20/XMLSchema">',
+      '<pan>', ptz.pan, '</pan><tilt>', ptz.tilt, '</tilt><zoom>',
+      ptz.zoom,'</zoom><Momentary><duration>', millis,
+      '</duration></Momentary></PTZData>'
+    ].join('')
+    return this.doXmlPut(url, xmlData)
+  }
 
   getPresets(): Observable<Preset[]> {
     const url = [this.baseUrl, 'presets'].join('/')

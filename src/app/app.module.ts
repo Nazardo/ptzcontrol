@@ -7,12 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { PresetListComponent } from './preset-list/preset-list.component';
 import { SetPresetFormComponent } from './set-preset-form/set-preset-form.component';
+import { MovePtzComponent } from './move-ptz/move-ptz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PresetListComponent,
-    SetPresetFormComponent
+    SetPresetFormComponent,
+    MovePtzComponent
   ],
   imports: [
     BrowserModule,
