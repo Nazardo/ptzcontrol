@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="navBrand" datatype="html">
+        <source>PTZ Camera control</source>
+        <target>Controllo camera PTZ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navItemPresets" datatype="html">
+        <source>Presets</source>
+        <target>Preset</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navItemManual" datatype="html">
+        <source>Manual</source>
+        <target>Manuale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="refreshPresetsButton" datatype="html">
+        <source>Refresh</source>
+        <target>Aggiorna</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/preset-list/preset-list.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="presetNumberAttr" datatype="html">
+        <source>Number</source>
+        <target>Numero</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/set-preset-form/set-preset-form.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="presetLabelAttr" datatype="html">
+        <source>Label</source>
+        <target>Etichetta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/set-preset-form/set-preset-form.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setPresetButton" datatype="html">
+        <source>Set</source>
+        <target>Imposta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/set-preset-form/set-preset-form.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setPresetError" datatype="html">
+        <source>Error setting preset.</source>
+        <target>Errore impostazione preset.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/set-preset-form/set-preset-form.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setPresetSuccessful" datatype="html">
+        <source>Preset created successfully.</source>
+        <target>Preset creato con successo.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/set-preset-form/set-preset-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cameraLoginTitle" datatype="html">
+        <source>Camera Login</source>
+        <target>Login Camera</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="usernameLabel" datatype="html">
+        <source>Username</source>
+        <target>Utente</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordLabel" datatype="html">
+        <source>Password</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saveButton" datatype="html">
+        <source>Save</source>
+        <target>Salva</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/login-page/login-page.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setPresetTitle" datatype="html">
+        <source>Set preset</source>
+        <target>Imposta preset</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presets-page/presets-page.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="moveTitle" datatype="html">
+        <source>Move</source>
+        <target>Spostamento</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="moveButtonsExplanation" datatype="html">
+        <source>Keep buttons pressed to achieve longer movement.</source>
+        <target>Tieni premuto il pulsante per un movimento più lungo.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="panLeftButton" datatype="html">
+        <source>Left</source>
+        <target>Sinistra</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="panRightButton" datatype="html">
+        <source>Right</source>
+        <target>Destra</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stopButton" datatype="html">
+        <source>Stop</source>
+        <target>Stop</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="panSpeed" datatype="html">
+        <source>Pan speed</source>
+        <target>Velocità orizzontale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tiltUpButton" datatype="html">
+        <source>Up</source>
+        <target>Alza</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tiltDownButton" datatype="html">
+        <source>Down</source>
+        <target>Abbassa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tiltSpeed" datatype="html">
+        <source>Tilt speed</source>
+        <target>Velocità verticale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoomWideButton" datatype="html">
+        <source>Wide</source>
+        <target>Allarga</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoomTeleButton" datatype="html">
+        <source>Tele</source>
+        <target>Restringi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoomSpeed" datatype="html">
+        <source>Zoom speed</source>
+        <target>Velocità zoom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/manual-page/manual-page.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
