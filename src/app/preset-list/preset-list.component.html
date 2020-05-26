@@ -1,4 +1,14 @@
-<button type="button"
-  class="btn btn-primary mb-2 mr-sm-2"
-  *ngFor="let p of presets"
-  (click)="presetClick(p)"><small>{{p.number}} </small>{{p.label}}</button>
+<div class="row">
+  <div class="col">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let p of presets">
+        <button type="button"
+          class="btn btn-block"
+          [ngClass]="{'btn-success': p.success, 'btn-danger': p.error, 'btn-primary': (!p.success && !p.error)}"
+          (click)="presetClick(p)"><small>{{p.id}} </small>{{p.label}}</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary btn-sm"
+      (click)="refreshClick()" i18n="@@refreshPresetsButton">Refresh</button>
+  </div>
+</div>

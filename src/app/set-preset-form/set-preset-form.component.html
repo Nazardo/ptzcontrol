@@ -9,7 +9,16 @@
     <input type="text" required [(ngModel)]="label" name="label"
         class="form-control mb-2 mr-sm-1" id="presetLabel">
     <button type="submit"
-        class="btn btn-danger mb-2"
+        class="btn btn-success mb-2"
         [disabled]="!presetForm.form.valid"
         i18n="@@setPresetButton">Set</button>
 </form>
+<ngb-alert type="danger" [dismissible]="false"
+    *ngIf="showErrorAlert"
+    i18n="@@setPresetError">
+    Error setting preset.
+</ngb-alert>
+<ngb-alert type="success" [dismissible]="false"
+    *ngIf="showSuccessAlert" i18n="@@setPresetSuccessful">
+    Preset created successfully.
+</ngb-alert>

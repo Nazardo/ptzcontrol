@@ -1,20 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <span class="navbar-brand">
+            <img src="favicon-32x32.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <ng-container i18n="@@navBrand">PTZ Camera control</ng-container>
+        </span>
+        <button class="navbar-toggler" type="button" (click)="navbarCollapsed=!navbarCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" [ngClass]="{'collapse': navbarCollapsed}">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link"
+                        [routerLink]="['/presets']"
+                        [routerLinkActive]="['active']"
+                        i18n="@@navItemPresets">Presets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        [routerLink]="['/manual']"
+                        [routerLinkActive]="['active']"
+                        i18n="@@navItemManual">Manual</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h2 i18n="@@testPtzTitle">Test PTZ</h2>
-            <app-move-ptz></app-move-ptz>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h2 i18n="@@presetsTitle">Presets</h2>
-            <app-preset-list></app-preset-list>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h2 i18n="@@setPresetTitle">Set preset</h2>
-            <app-set-preset-form></app-set-preset-form>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>

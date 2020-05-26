@@ -1,5 +1,15 @@
-$body-bg: #333;
-$body-color: #EEE;
+/*$body-bg: #222;
+$body-color: #FFF;
+
+$theme-colors: (
+  "primary": #d0e9ff
+);*/
+
+@import 'styles.superhero.scss';
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+.navbar {
+    margin-bottom: 1rem;
+}

@@ -84,24 +84,31 @@ export class IsapiImplementationService {
     return this.doXmlPut(url, xmlData)
   }
 
-  readonly xmlHttpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/x-www-form-urlencoded; charset=UTF-8'
-    })
-  }
-
   private doXmlPut(url: string, xml: string): Observable<void> {
-    return this.httpClient.put<void>(url, xml, this.xmlHttpOptions)
-      .pipe(
-        catchError(this.handleHttpError)
-      );
+    return this.httpClient.put(url, xml, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Accept': 'application/xml'
+      }),
+      responseType: "text"
+    })
+    .pipe(
+      catchError(this.handleHttpError),
+      map(_ => void 0)
+    )
   }
 
   private doEmptyPut(url: string): Observable<void> {
-    return this.httpClient.put<void>(url, {})
-      .pipe(
-        catchError(this.handleHttpError)
-      );
+    return this.httpClient.put(url, {}, {
+      headers: new HttpHeaders({
+          'Accept': 'application/xml'
+      }),
+      responseType: "text"
+    })
+    .pipe(
+      catchError(this.handleHttpError),
+      map(_ => void 0)
+    );
   }
 
   private handleHttpError(error: HttpErrorResponse) {

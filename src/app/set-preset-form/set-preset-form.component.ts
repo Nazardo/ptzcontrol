@@ -21,13 +21,20 @@ export class SetPresetFormComponent implements OnInit {
   label: string
   number: number
 
+  showErrorAlert = false
+  showSuccessAlert = false
+
   set(): void {
+    this.showErrorAlert = this.showSuccessAlert = false
     this.isapi.setPreset({
       label: this.label,
       number: this.number
     }).subscribe(
-      () => this.presets.refreshPresets(),
-      error => console.error(error)
+      _ => {
+        this.presets.refreshPresets()
+        this.showSuccessAlert = true
+      },
+      _ => this.showErrorAlert = true
     )
   }
 }

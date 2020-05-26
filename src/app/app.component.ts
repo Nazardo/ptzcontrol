@@ -12,6 +12,8 @@ export class AppComponent {
     private presetsService: PresetsService
   ) { }
 
+  navbarCollapsed = true
+
   ngOnInit(): void {
     this.presetsService.refreshPresets()
   }
