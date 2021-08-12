@@ -32,12 +32,12 @@ export class SetPresetFormComponent implements OnInit {
     this.isapi.setPreset({
       label: this.label,
       number: this.number
-    }).subscribe(
-      _ => {
+    }).subscribe({
+      next: _ => {
         this.presets.refreshPresets()
         this.showSuccessAlert = true
       },
-      _ => this.showErrorAlert = true
-    )
+      error: _ => this.showErrorAlert = true
+    })
   }
 }

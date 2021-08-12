@@ -23,9 +23,9 @@ export class PresetsService {
 
   refreshPresets(): void {
     this.isapi.getPresets()
-      .subscribe(
-        presets => this.presets.next(presets),
-        error => {
+      .subscribe({
+        next: presets => this.presets.next(presets),
+        error: error => {
           let p = []
           for (let i = 0; i < 20; ++i) {
             p.push({
@@ -36,6 +36,6 @@ export class PresetsService {
           this.presets.next(p)
           console.log(p)
         }
-      )
+      })
   }
 }

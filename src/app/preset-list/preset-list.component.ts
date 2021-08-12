@@ -42,10 +42,10 @@ export class PresetListComponent implements OnInit {
     })
     // Call API to go to new preset
     this.isapi.presetGoto(preset.id)
-      .subscribe(
-        _ => preset.success = true,
-        _ => preset.error = true
-      )
+      .subscribe({
+        next: _ => preset.success = true,
+        error: _ => preset.error = true
+      })
   }
 
   refreshClick(): void {
