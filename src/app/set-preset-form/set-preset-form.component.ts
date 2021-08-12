@@ -18,13 +18,16 @@ export class SetPresetFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  label: string
-  number: number
+  label: string | undefined
+  number: number | undefined
 
   showErrorAlert = false
   showSuccessAlert = false
 
   set(): void {
+    if (this.label === undefined || this.number === undefined) {
+      return;
+    }
     this.showErrorAlert = this.showSuccessAlert = false
     this.isapi.setPreset({
       label: this.label,

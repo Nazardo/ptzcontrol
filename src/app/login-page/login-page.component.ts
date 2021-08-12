@@ -13,6 +13,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   username: string = "admin"
-  password: string
+  password: string | undefined
 
 }

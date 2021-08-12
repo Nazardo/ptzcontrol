@@ -12,7 +12,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Production build with:
 
-    ng build --aot=true --buildOptimizer=true --prod --localize
+    ng build --aot=true --buildOptimizer=true --configuration production --localize
 
 ## Proxy configuration
 

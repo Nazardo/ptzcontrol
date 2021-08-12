@@ -16,7 +16,9 @@ export class PresetListComponent implements OnInit {
   constructor(
     private presetsService: PresetsService,
     private isapi: IsapiImplementationService
-  ) { }
+  ) {
+    this.presets = []
+  }
 
   ngOnInit(): void {
     this.presetsService.cachedPresets()
