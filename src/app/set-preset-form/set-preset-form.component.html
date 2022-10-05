@@ -1,13 +1,13 @@
-<form class="form-inline" #presetForm="ngForm" (ngSubmit)="set()">
-    <label for="presetNumber" class="sr-only"
+<form class="d-flex flex-row align-items-center" #presetForm="ngForm" (ngSubmit)="set()">
+    <label for="presetNumber" class="visually-hidden"
         i18n="@@presetNumberAttr">Number</label>
     <input type="number" required [(ngModel)]="number" name="number"
-        class="form-control mb-2 mr-sm-1" id="presetNumber"
+        class="form-control mb-2 me-sm-1" id="presetNumber"
         placeholder="1-20" min="1" max="20">
-    <label for="presetLabel" class="mb-2 mr-sm-1"
+    <label for="presetLabel" class=" mb-2 me-sm-1"
         i18n="@@presetLabelAttr">Label</label>
     <input type="text" required [(ngModel)]="label" name="label"
-        class="form-control mb-2 mr-sm-1" id="presetLabel">
+        class="form-control mb-2 me-sm-1" id="presetLabel">
     <button type="submit"
         class="btn btn-success mb-2"
         [disabled]="!presetForm.form.valid"

@@ -3,43 +3,43 @@
         <h3 i18n="@@moveTitle">Move</h3>
         <p i18n="@@moveButtonsExplanation">Keep buttons pressed to achieve longer movement.</p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-5">
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(-1,0,0)" (mouseup)="stop()" i18n="@@panLeftButton">Left</button>
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(1,0,0)" (mouseup)="stop()" i18n="@@panRightButton">Right</button>
         <button type="button" class="btn btn-secondary btn-sm m-2"
             (click)="stop()" i18n="@@stopButton">Stop</button>
-        <div class="form-group">
-            <label for="panSpeedRange"><ng-container i18n="@@panSpeed">Pan speed</ng-container> (1-100): {{panSpeed}}</label>
+        <div>
+            <label for="panSpeedRange" class="form-label"><ng-container i18n="@@panSpeed">Pan speed</ng-container> (1-100): {{panSpeed}}</label>
             <input type="range" min="1" max="100" [(ngModel)]="panSpeed"
-                class="form-control-range" id="panSpeedRange">
+                class="form-range" id="panSpeedRange">
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-5">
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(0,1,0)" (mouseup)="stop()" i18n="@@tiltUpButton">Up</button>
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(0,-1,0)" (mouseup)="stop()" i18n="@@tiltDownButton">Down</button>
         <button type="button" class="btn btn-secondary btn-sm m-2"
             (click)="stop()" i18n="@@stopButton">Stop</button>
-        <div class="form-group">
-            <label for="tiltSpeedRange"><ng-container i18n="@@tiltSpeed">Tilt speed</ng-container> (1-100): {{tiltSpeed}}</label>
+        <div>
+            <label for="tiltSpeedRange" class="form-label"><ng-container i18n="@@tiltSpeed">Tilt speed</ng-container> (1-100): {{tiltSpeed}}</label>
             <input type="range" min="1" max="100" [(ngModel)]="tiltSpeed"
-                class="form-control-range" id="tiltSpeedRange">
+                class="form-range" id="tiltSpeedRange">
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-5">
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(0,0,-1)" (mouseup)="stop()" i18n="@@zoomWideButton">Wide</button>
         <button type="button" class="btn btn-info m-2"
             (mousedown)="move(0,0,1)" (mouseup)="stop()" i18n="@@zoomTeleButton">Tele</button>
         <button type="button" class="btn btn-secondary btn-sm m-2"
             (click)="stop()" i18n="@@stopButton">Stop</button>
-        <div class="form-group">
-            <label for="panRange"><ng-container i18n="@@zoomSpeed">Zoom speed</ng-container> (1-100): {{zoomSpeed}}</label>
+        <div>
+            <label for="panRange" class="form-label"><ng-container i18n="@@zoomSpeed">Zoom speed</ng-container> (1-100): {{zoomSpeed}}</label>
             <input type="range" min="1" max="100" [(ngModel)]="zoomSpeed"
-                class="form-control-range" id="panRange">
+                class="form-range" id="panRange">
         </div>
     </div>
     <div class="col-12">

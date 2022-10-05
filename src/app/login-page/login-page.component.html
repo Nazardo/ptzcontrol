@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col">
         <h1 i18n="@@cameraLoginTitle">Camera Login</h1>
-        <form class="form-inline" #loginForm="ngForm">
-            <label for="username" class="sr-only"
+        <form class="d-flex flex-row" #loginForm="ngForm">
+            <label for="username" class="visually-hidden"
                 i18n="@@usernameLabel">Username</label>
             <input type="text" required [(ngModel)]="username" name="username"
-                class="form-control mb-2 mr-sm-1" id="username"
+                class="form-control mb-2 me-sm-1" id="username"
                 placeholder="Username">
-            <label for="password" class="sr-only"
+            <label for="password" class="visually-hidden"
                 i18n="@@passwordLabel">Password</label>
             <input type="password" required [(ngModel)]="password" name="password"
-                class="form-control mb-2 mr-sm-1" id="password">
+                class="form-control mb-2 me-sm-1" id="password">
             <button type="submit"
                 class="btn btn-success mb-2"
                 [disabled]="!loginForm.form.valid"
