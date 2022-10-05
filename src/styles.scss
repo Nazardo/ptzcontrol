@@ -8,7 +8,7 @@ $theme-colors: (
 @import 'styles.superhero.scss';
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 .navbar {
     margin-bottom: 1rem;
