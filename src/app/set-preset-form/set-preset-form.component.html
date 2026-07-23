@@ -1,24 +1,27 @@
 <form class="d-flex flex-row align-items-center" #presetForm="ngForm" (ngSubmit)="set()">
-    <label for="presetNumber" class="visually-hidden"
-        i18n="@@presetNumberAttr">Number</label>
-    <input type="number" required [(ngModel)]="number" name="number"
-        class="form-control mb-2 me-sm-1" id="presetNumber"
-        placeholder="1-20" min="1" max="20">
-    <label for="presetLabel" class=" mb-2 me-sm-1"
-        i18n="@@presetLabelAttr">Label</label>
-    <input type="text" required [(ngModel)]="label" name="label"
-        class="form-control mb-2 me-sm-1" id="presetLabel">
-    <button type="submit"
-        class="btn btn-success mb-2"
-        [disabled]="!presetForm.form.valid"
-        i18n="@@setPresetButton">Set</button>
+  <label for="presetNumber" class="visually-hidden"
+  i18n="@@presetNumberAttr">Number</label>
+  <input type="number" required [(ngModel)]="number" name="number"
+    class="form-control mb-2 me-sm-1" id="presetNumber"
+    placeholder="1-20" min="1" max="20">
+  <label for="presetLabel" class=" mb-2 me-sm-1"
+  i18n="@@presetLabelAttr">Label</label>
+  <input type="text" required [(ngModel)]="label" name="label"
+    class="form-control mb-2 me-sm-1" id="presetLabel">
+  <button type="submit"
+    class="btn btn-success mb-2"
+    [disabled]="!presetForm.form.valid"
+  i18n="@@setPresetButton">Set</button>
 </form>
-<ngb-alert type="danger" [dismissible]="false"
-    *ngIf="showErrorAlert"
+@if (showErrorAlert) {
+  <ngb-alert type="danger" [dismissible]="false"
     i18n="@@setPresetError">
     Error setting preset.
 </ngb-alert>
-<ngb-alert type="success" [dismissible]="false"
-    *ngIf="showSuccessAlert" i18n="@@setPresetSuccessful">
+}
+@if (showSuccessAlert) {
+  <ngb-alert type="success" [dismissible]="false"
+    i18n="@@setPresetSuccessful">
     Preset created successfully.
 </ngb-alert>
+}

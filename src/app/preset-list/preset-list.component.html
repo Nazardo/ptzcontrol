@@ -1,13 +1,15 @@
 <div class="row">
   <div class="col">
     <div class="row">
-      <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-grid" *ngFor="let p of presets">
-        <button type="button" class="btn"
-          [ngClass]="{'btn-success': p.success, 'btn-danger': p.error, 'btn-primary': (!p.success && !p.error)}"
-          (click)="presetClick(p)"><small>{{p.id}} </small>{{p.label}}</button>
+      @for (p of presets; track p) {
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-grid">
+          <button type="button" class="btn"
+            [ngClass]="{'btn-success': p.success, 'btn-danger': p.error, 'btn-primary': (!p.success && !p.error)}"
+            (click)="presetClick(p)"><small>{{p.id}} </small>{{p.label}}</button>
+          </div>
+        }
       </div>
-    </div>
-    <button type="button" class="btn btn-secondary btn-sm"
+      <button type="button" class="btn btn-secondary btn-sm"
       (click)="refreshClick()" i18n="@@refreshPresetsButton">Refresh</button>
+    </div>
   </div>
-</div>
