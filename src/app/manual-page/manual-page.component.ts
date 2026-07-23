@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { IsapiImplementationService } from '../isapi-implementation.service';
 
 @Component({
-  selector: 'app-manual-page',
-  templateUrl: './manual-page.component.html',
-  styleUrls: ['./manual-page.component.scss']
+    selector: 'app-manual-page',
+    templateUrl: './manual-page.component.html',
+    styleUrls: ['./manual-page.component.scss'],
+    standalone: false
 })
 export class ManualPageComponent implements OnInit {
 

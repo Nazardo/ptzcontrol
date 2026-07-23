@@ -5,10 +5,10 @@ $theme-colors: (
   "primary": #d0e9ff
 );*/
 
-@import 'styles.superhero.scss';
+@use 'styles.superhero.scss';
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@use 'bootstrap/scss/bootstrap';
 
 .navbar {
     margin-bottom: 1rem;

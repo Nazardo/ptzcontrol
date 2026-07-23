@@ -4,9 +4,10 @@ import { Preset } from '../preset';
 import { PresetsService } from '../presets.service';
 
 @Component({
-  selector: 'app-set-preset-form',
-  templateUrl: './set-preset-form.component.html',
-  styleUrls: ['./set-preset-form.component.scss']
+    selector: 'app-set-preset-form',
+    templateUrl: './set-preset-form.component.html',
+    styleUrls: ['./set-preset-form.component.scss'],
+    standalone: false
 })
 export class SetPresetFormComponent implements OnInit {
 

@@ -7,9 +7,10 @@ import { map, take } from 'rxjs/operators';
 import { interval, concat } from 'rxjs';
 
 @Component({
-  selector: 'app-preset-list',
-  templateUrl: './preset-list.component.html',
-  styleUrls: ['./preset-list.component.scss']
+    selector: 'app-preset-list',
+    templateUrl: './preset-list.component.html',
+    styleUrls: ['./preset-list.component.scss'],
+    standalone: false
 })
 export class PresetListComponent implements OnInit {
 
