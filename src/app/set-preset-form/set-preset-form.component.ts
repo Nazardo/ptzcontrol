@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IsapiImplementationService } from '../isapi-implementation.service';
 import { Preset } from '../preset';
 import { PresetsService } from '../presets.service';
@@ -7,6 +7,7 @@ import { PresetsService } from '../presets.service';
     selector: 'app-set-preset-form',
     templateUrl: './set-preset-form.component.html',
     styleUrls: ['./set-preset-form.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SetPresetFormComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Preset } from '../preset';
 import { PresetsService } from '../presets.service';
 import { IsapiImplementationService } from '../isapi-implementation.service';
@@ -10,6 +10,7 @@ import { interval, concat } from 'rxjs';
     selector: 'app-preset-list',
     templateUrl: './preset-list.component.html',
     styleUrls: ['./preset-list.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PresetListComponent implements OnInit {
